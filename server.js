@@ -42,7 +42,6 @@ app.post('/shopping-list', jsonParser, (req, res) => {
       return res.status(400).send(message);
     }
   }
-
   const item = ShoppingList.create(req.body.name, req.body.budget);
   res.status(201).json(item);
 });
